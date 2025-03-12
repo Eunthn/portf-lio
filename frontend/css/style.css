@@ -117,6 +117,7 @@ ul {
   margin-left: -15px;
   margin-right: -15px;
   position: relative;
+  margin-bottom: 10px;
 }
 .btn {
   font-size: 16px;
@@ -132,6 +133,8 @@ ul {
 }
 .btn:hover {
   transform: scale(1.05);
+  filter: drop-shadow(0 0 20px var(--skin-color));
+  cursor: pointer;
 }
 .shadow-dark {
   box-shadow: 0 0 20px rgba(48, 46, 77, 0.15);
@@ -296,86 +299,6 @@ h3.my-profession {
 }
 
 /* Home IMG*/
-/*.home .home-img {
-  flex: 0 0 40%;
-  max-width: 40%;
-  text-align: center;
-  position: relative;
-}
-.home-img::after {
-  content: "";
-  position: absolute;
-  height: 80px;
-  width: 80px;
-  border-bottom: 10px solid var(--skin-color);
-  border-right: 10px solid var(--skin-color);
-  right: 20px;
-  bottom: -40px;
-}
-.home-img::before {
-  content: "";
-  position: absolute;
-  height: 80px;
-  width: 80px;
-  border-top: 10px solid var(--skin-color);
-  border-left: 10px solid var(--skin-color);
-  left: 20px;
-  top: -40px;
-}
-.home .home-img img {
-  margin: auto;
-  border-radius: 5px;
-  height: 400px;
-}*/
-
-/* Imagem 2*/
-/*
-.home-img .img-box {
-  position: relative;
-  width: 32vw;
-  height: 32vw;
-  border-radius: 50%;
-  padding: 5px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  overflow: hidden;
-}
-.home-img .img-box::before,
-.home-img .img-box::after {
-  content: "";
-  position: absolute;
-  width: 500px;
-  height: 500px;
-  background: conic-gradient(
-    transparent,
-    transparent,
-    transparent,
-    var(--skin-color)
-  );
-}
-.home-img .img-box .img-item {
-  position: relative;
-  width: 100%;
-  height: 100%;
-  background: var(--bg-black-900);
-  border-radius: 50%;
-  border: 0.1px solid var(--bg-black-900);
-  display: flex;
-  justify-content: center;
-  z-index: 1;
-  overflow: hidden;
-}
-.home-img .img-box .img-item img {
-  position: absolute;
-  top: 20px;
-  display: block;
-  width: 85%;
-  object-fit: cover;
-}*/
-
-/* Imagem 3 */
-
 .home .home-img {
   flex: 0 0 40%;
   max-width: 40%;
@@ -406,7 +329,6 @@ h3.my-profession {
 }
 
 /* Arco 1 – será exibido no lado direito */
-/* O gradiente foi definido para que, a partir de um ponto (aqui, 'from 90deg'), haja uma faixa sólida (0 a 20deg) seguida por um degradê (20 a 60deg) */
 .home-img .img-box .arc-1 {
   background: conic-gradient(
     from 90deg,
@@ -415,11 +337,9 @@ h3.my-profession {
     transparent,
     var(--skin-color)
   );
-  /* Limita o arco à metade direita do círculo */
 }
 
 /* Arco 2 – será exibido no lado esquerdo */
-/* Definido de forma semelhante, mas com o 'from' ajustado para 270deg para inverter a direção do degradê */
 .home-img .img-box .arc-2 {
   background: conic-gradient(
     from 270deg,
@@ -429,6 +349,11 @@ h3.my-profession {
     var(--skin-color)
   );
 }
+/* Adiciona a sombra quando o mouse passa por cima da caixa da imagem */
+/*.home-img .img-box:hover {
+  box-shadow: 0 0 20px var(--skin-color); 
+  transition: box-shadow 0.3s ease; 
+}*/
 
 /* Conteúdo da imagem – reduzido um pouco para que a “borda” fique visível */
 .home-img .img-box .img-item {

@@ -84,6 +84,17 @@ function asideSectionTogglerBtn() {
   }
 }
 
+/* ================================== Aside Logo ===================================== */
+// Seleciona o link da logo e o item "Home" no menu de navegação
+const logoLink = document.querySelector(".logo a");
+const homeNavLink = document.querySelector('.nav a[href="#home"]');
+
+// Adiciona um evento de clique ao link da logo
+logoLink.addEventListener("click", function (event) {
+  event.preventDefault(); // Evita o comportamento padrão do link
+  homeNavLink.click(); // Simula o clique no item "Home" do menu
+});
+
 /* =============================== arco giratório =================================== */
 // Seleciona os arcos giratórios
 const arc1 = document.querySelector(".arc-1");
@@ -99,3 +110,31 @@ function rotateArcs() {
 }
 
 rotateArcs();
+
+/* =============================== hover arco giratório =================================== */
+// Seleciona o elemento da caixa da imagem
+const imgBox = document.querySelector(".img-box");
+const arcs = document.querySelectorAll(".rotating-arc");
+
+// Adiciona efeito neon aos arcos e aumenta o tamanho da img-box
+imgBox.addEventListener("mouseenter", () => {
+  imgBox.style.overflow = "visible"; // Permitir transbordo
+  imgBox.style.transition = "transform 0.3s ease"; // Suavidade no crescimento
+  imgBox.style.transform = "scale(1.03)"; // Aumenta o tamanho da img-box
+  arcs.forEach((arc) => {
+    arc.style.filter = `
+      drop-shadow(0 0 5px var(--skin-color))
+      drop-shadow(0 0 15px var(--skin-color))
+      drop-shadow(0 0 20px var(--skin-color))
+    `;
+  });
+});
+
+// Remove o efeito neon e restaura o tamanho da img-box
+imgBox.addEventListener("mouseleave", () => {
+  imgBox.style.overflow = "hidden"; // Voltar ao padrão
+  imgBox.style.transform = "scale(1)"; // Retorna ao tamanho original
+  arcs.forEach((arc) => {
+    arc.style.filter = "none";
+  });
+});
