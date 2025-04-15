@@ -136,6 +136,9 @@ ul {
   filter: drop-shadow(0 0 20px var(--skin-color));
   cursor: pointer;
 }
+.whatsapp-btn {
+  margin-left: 30px;
+}
 .shadow-dark {
   box-shadow: 0 0 20px rgba(48, 46, 77, 0.15);
 }
@@ -618,9 +621,35 @@ h3.my-profession {
   overflow: hidden;
   cursor: pointer;
 }
+
+.portfolio .portfolio-item-inner .portfolio-img {
+  background-color: var(--bg-black-100);
+}
 .portfolio .portfolio-item-inner .portfolio-img img {
   width: 100%;
   display: block;
+  border-radius: 3%;
+}
+
+.portfolio .portfolio-item-inner .portfolio-title {
+  padding: 12px 0;
+  background-color: var(--bg-black-100); /* claro em day, escuro em night */
+  text-align: left;
+}
+
+.portfolio .portfolio-item-inner .portfolio-title h3 {
+  margin: 0;
+  font-size: 1rem; /* ajuste se quiser maior/menor */
+  font-weight: 500; /* coerente com seus outros headings */
+  color: var(--text-black-900); /* escuro em day, branco em night */
+  margin-left: 10px;
+}
+
+.portfolio .portfolio-item-inner .portfolio-title h3 span {
+  margin: 0;
+  font-size: 16px; /* ajuste se quiser maior/menor */
+  font-weight: 700; /* coerente com seus outros headings */
+  color: var(--skin-color); /* escuro em day, branco em night */
 }
 
 /* Contact */
